@@ -1,0 +1,27 @@
+.wrapper_item {
+  width: 100%;
+  padding: 0 6px;
+  .image {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  .content {
+    padding-top: 20px;
+    .content_title {
+      font-size: 20px;
+      color: black;
+    }
+    .content_inner {
+      line-height: 30px;
+      letter-spacing: 1px;
+      padding-top: 10px;
+      color: #222222;
+      font-size: 15px;
+      word-wrap: break-word;
+    }
+  }
+}

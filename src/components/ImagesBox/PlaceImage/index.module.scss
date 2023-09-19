@@ -1,0 +1,212 @@
+.item_wrapper {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.3s;
+  .tour_image {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center center;
+    transition: 0.3s;
+    cursor: pointer;
+    p {
+      padding: 5px 15px 15px 15px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 700;
+      color: white;
+      text-transform: capitalize;
+      z-index: 1;
+    }
+    .price {
+      font-size: 15px;
+      line-height: 20px;
+      padding: 5px 12px 5px 12px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      z-index: 1;
+      background-color: #ff4a52;
+      transition: 0.3s;
+    }
+    .price_sale {
+      font-size: 15px;
+      line-height: 20px;
+      padding: 5px 12px 5px 12px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      z-index: 1;
+      background-color: #ff4a52;
+      transition: 0.3s;
+      .price_decoration {
+        text-decoration-line: line-through;
+        color: #dce0e0;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .tour_image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 22%,
+      rgba(0, 0, 0, 0.25253851540616246) 73%
+    );
+  }
+  .portfolio_info_wrapper {
+    text-align: left;
+    padding: 15px;
+    .date {
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .info_title {
+      cursor: pointer;
+      font-size: 20px;
+      color: #000000;
+      font-weight: 700;
+      letter-spacing: 0px;
+      line-height: 1.4em;
+    }
+    .address {
+      color: #222222;
+      font-size: 13px;
+      padding: 5px 0 24px 0;
+    }
+    .content_articles {
+      font-size: 15px;
+      font-weight: 400;
+      color: #222222;
+      padding-top: 20px;
+    }
+    .read_more {
+      cursor: pointer;
+      margin-top: 30px;
+      color: #646464;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      max-width: fit-content;
+      span {
+        padding-top: 5px;
+      }
+    }
+    .read_more:hover {
+      color: #000000;
+    }
+    .tour_attribute_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .tour_attribute_rating {
+        display: flex;
+        align-items: center;
+        column-gap: 3px;
+        flex-wrap: wrap;
+        .text {
+          color: #222222;
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 600;
+          padding-bottom: 4px;
+        }
+      }
+      .tour_attribute_days {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: #222222;
+        column-gap: 3px;
+        p {
+          margin-top: -4px;
+          width: max-content;
+        }
+      }
+    }
+  }
+  @media (max-width: 959px) {
+    .portfolio_info_wrapper {
+      .info_title {
+        font-size: 18px;
+      }
+    }
+    .tour_image {
+      min-height: 180px;
+    }
+  }
+}
+
+.item_wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+}
+
+.price_style {
+  position: relative;
+  overflow: initial;
+  border: 1px solid #dce0e0;
+  .tour_image {
+    height: auto;
+    min-height: unset;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .price {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+    }
+    .price_sale {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+    }
+  }
+  .tour_image::before {
+    content: "";
+    position: absolute;
+    background: unset;
+  }
+  .articles_info {
+    padding: 30px;
+  }
+
+  .sale_title {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    color: white;
+    background: #1ec6b6;
+    border-radius: 50px;
+    padding: 10px 7px 10px 7px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+.price_style:hover {
+  .tour_image {
+    .price {
+      scale: 1.3;
+      margin-left: 2%;
+    }
+    .price_sale {
+      scale: 1.3;
+      margin-left: 4%;
+    }
+  }
+}

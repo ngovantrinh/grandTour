@@ -1,0 +1,210 @@
+:root {
+  --column-gap: 2%;
+}
+body {
+  counter-reset: number;
+}
+
+.home_wrapper {
+  .banner {
+    width: 100%;
+    position: relative;
+    .video_background {
+      width: 100%;
+      height: 800px;
+      overflow: hidden;
+      transition: 0.3s;
+      .overlay_video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .banner_content {
+          text-align: center;
+          width: 100%;
+          .banner_title {
+            font-size: 36px;
+            color: white;
+          }
+          .banner_note {
+            color: #ebebeb;
+            font-weight: 500;
+          }
+          .tour_search_wrapper {
+            display: flex;
+            width: 100%;
+            column-gap: var(--column-gap);
+            padding: 20px 0 0 0;
+            height: 59px;
+            transition: 0.4s;
+            .input_item {
+              counter-increment: number;
+              width: calc(94% / 4);
+              .button_search {
+                background-color: #ff4a52;
+                font-size: 15px;
+                width: 100%;
+                padding: 10px;
+                line-height: 17px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                color: white;
+                transition: 0.3s;
+                cursor: pointer;
+              }
+              .button_search:hover {
+                background: #1ec6b6;
+              }
+            }
+          }
+          .advanced_search_field {
+            height: 0px;
+            padding: 0;
+          }
+          .advanced_search_title {
+            text-align: left;
+            color: white;
+            padding-top: 20px;
+            cursor: pointer;
+            max-width: max-content;
+            .arrow_icon {
+              padding-right: 4px;
+            }
+          }
+        }
+      }
+    }
+
+    .video_bg {
+      width: 100%;
+      height: 1080.5px;
+      margin: -159.25px 0px 0px -1px;
+      z-index: -1;
+      transition: 0.2s;
+    }
+  }
+
+  .content_box {
+    margin-top: 70px;
+    text-align: center;
+    .list_items {
+      padding: 50px 0;
+      display: flex;
+      column-gap: 30px;
+      .item_list {
+        width: calc(25% - 22.5px);
+      }
+      // .item_list:hover {
+      //   transform: translateY(-4px);
+      //   box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+      // }
+    }
+  }
+  .trips {
+    .list_items {
+      .item_list {
+        width: calc(33.33% - 20px);
+        transition: 0.1s;
+      }
+    }
+  }
+  .reasons {
+    .list_items {
+      .item_list {
+        width: 30.66%;
+        margin-right: 4%;
+      }
+    }
+  }
+  .bridge_image {
+    background-image: url(../../assets/images/bridge_image.jpg);
+    height: 60vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  @media (max-width: 1500px) {
+    .banner {
+      .video_bg {
+        width: 110%;
+        height: 1100.5px;
+        margin: -159.25px 0px 0px -1px;
+      }
+    }
+  }
+
+  @media (max-width: 1340px) {
+    .banner {
+      .video_bg {
+        width: 140%;
+        height: 1100.5px;
+        margin: -130.25px 0px 0px -1px;
+      }
+    }
+  }
+
+  @media (max-width: 1125px) {
+    .banner {
+      .video_bg {
+        width: 1600px;
+        height: 1100.5px;
+        margin: -130.25px 0px 0px -1px;
+        margin-left: -150px;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .banner {
+      .video_bg {
+        margin-left: -250px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .banner {
+      .video_background {
+        height: 600px;
+        .overlay_video {
+          height: 600px;
+          .banner_content {
+            .banner_title {
+              font-size: 24px;
+            }
+            .tour_search_wrapper {
+              flex-direction: column;
+              row-gap: 13px;
+              height: max-content;
+              .input_item {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .video_bg {
+        margin-left: -300px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content_box {
+      .list_items {
+        flex-direction: column;
+        row-gap: 25px;
+        .item_list {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

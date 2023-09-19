@@ -1,0 +1,16 @@
+.title {
+  font-size: 36px;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+  }
+}
+.sub_title {
+  font-size: 15px;
+  color: #8d9199;
+}
