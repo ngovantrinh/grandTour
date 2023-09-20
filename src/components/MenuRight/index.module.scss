@@ -1,0 +1,31 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5494572829131652) 0%,
+    rgba(255, 255, 255, 0.5466561624649859) 100%
+  );
+  transition: 0.4s;
+  .menu_wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    transform: translateX(100%);
+    transition: 0.4s;
+    height: 100%;
+  }
+}
+.show_menu {
+  opacity: 1;
+  z-index: 199;
+  .menu_wrapper {
+    transform: translateX(0);
+  }
+}

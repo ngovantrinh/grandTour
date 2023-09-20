@@ -5,6 +5,9 @@
   box-sizing: border-box;
   /* font-family: Poppins, sans-serif; */
 }
+.app{
+  position: relative;
+}
 .container{
   max-width: 1425px;
   width: 100%;

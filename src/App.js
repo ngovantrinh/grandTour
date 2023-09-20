@@ -2,10 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomePageLayout from "./layouts/HomePageLayout";
 import HomePage from "./Pages/HomePage/HomePage";
+import MenuRight from "components/MenuRight";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <MenuRight />
       <HomePageLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />

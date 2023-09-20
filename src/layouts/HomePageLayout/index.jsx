@@ -12,8 +12,12 @@ import { BsTelephoneFill, BsFacebook } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuCalendarClock } from "react-icons/lu";
 import { ImYoutube } from "react-icons/im";
+import { useDispatch } from "react-redux";
+import { showMenuStatus } from "redux/featuresSlice/statusShowMenu";
 
 const HomePageLayout = ({ children }) => {
+  const dispatch = useDispatch();
+
   const [offSetY, setOffSetY] = useState(0);
   const preventOffset = useRef(offSetY);
   useEffect(() => {
@@ -39,7 +43,7 @@ const HomePageLayout = ({ children }) => {
   };
 
   const onShowMenu = () => {
-    console.log(offSetY);
+    dispatch(showMenuStatus());
   };
 
   return (
